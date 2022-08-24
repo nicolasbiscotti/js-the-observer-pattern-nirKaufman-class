@@ -4,7 +4,7 @@ import {
   PermissionManager,
   Router,
 } from './1-hands-on-the-problem.js';
-import { collection, map, filter } from './callback';
+import { collection, map, filter } from './3-callback';
 // Import stylesheets
 import './style.css';
 
@@ -27,7 +27,9 @@ auth.signIn();
 
 auth.suscribe(toast);
 
+const filterByTwentySize = (size) => size % 20 === 0;
+
 collection
   .manipulate(map((v) => v * 10))
-  .manipulate(filter((v) => v % 20 === 0))
+  .manipulate(filter(filterByTwentySize))
   .getValues((v) => console.log(v));

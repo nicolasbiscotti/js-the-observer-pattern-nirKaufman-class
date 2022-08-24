@@ -25,7 +25,7 @@ export const oldCollection = {
   filter: function (filterFn) {},
   reduce: function (reduceFn) {},
 };
-
+// this way you can import only wath you need
 export const collection = {
   getValues: function (callbackFn) {
     const items = [1, 2, 3, 4, 5, 6];
