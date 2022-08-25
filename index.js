@@ -4,7 +4,8 @@ import {
   PermissionManager,
   Router,
 } from './1-hands-on-the-problem.js';
-import { collection, map, filter } from './3-callback';
+import { collection } from './3-callback';
+import { fromArray, map, filter } from './3.1-callback.js';
 // Import stylesheets
 import './style.css';
 
@@ -33,3 +34,12 @@ collection
   .manipulate(map((v) => v * 10))
   .manipulate(filter(filterByTwentySize))
   .getValues((v) => console.log(v));
+
+const characters = fromArray(['a', 'b', 'c', 'd']);
+characters
+  .manipulate(filter((v) => v === 'a'))
+  .manipulate(map((v) => v + 'ok'))
+  .getValues((v) => console.log(v));
+
+const button = document.createElement('button');
+button.click();
