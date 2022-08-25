@@ -26,6 +26,7 @@ export const oldCollection = {
   reduce: function (reduceFn) {},
 };
 // this way you can import only wath you need
+// collection is an object with getValues and manipulate methods
 export const collection = {
   getValues: function (callbackFn) {
     const items = [1, 2, 3, 4, 5, 6];
